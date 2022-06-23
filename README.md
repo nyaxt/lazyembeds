@@ -8,9 +8,11 @@
 
 ## Introduction
 
-We (Google Chrome team) are currently exploring if perceived page load speed can be improved by introducing a different loading schedule to third-party embeds, such as social media, videos, analytics, live chat.
+Third-party embeds enable sites to integrate engaging web experiences hosted by third-party origins on a first-party site - this includes video players, social media content and widgets. While such embeds can supercharge a site's experience, they also come with a range of performance and privacy caveats.
 
-Here, we draw attention to cross-origin <iframe>s, which is widely used to integrate a website with such 3rd party SaaS.
+For example, it’s not uncommon for an embed to request and execute large amounts of script, which can have a surprising impact on the performance of the parent page - from resource contention to delaying interaction readiness. Similarly, embeds can often include tracking capabilities that may not be obvious to embedders.
+
+We (Google Chrome team) are currently exploring if perceived page load speed can be improved by introducing a different loading schedule to third-party embeds. Here, we draw attention to cross-origin <iframe>s, which is widely used to integrate a website with such 3rd party SaaS.
 
 ## Goals
 User agent explores different loading schedules for cross-origin <iframe>s. This is done by inserting arbitrary delays before cross-origin iframe to start.
